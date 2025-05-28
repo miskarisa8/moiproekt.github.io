@@ -1,6 +1,6 @@
 /* Общие стили */
 body {
-    font-family: 'Comic Sans MS', cursive, sans-serif;
+    font-family: 'Work Sans', sans-serif;
     margin: 0;
     background-color: #f9f9f9;
     color: #423d5f;
@@ -109,7 +109,12 @@ nav a:hover {
     border-radius: 10px;
     box-shadow: 0 5px 10px rgba(89, 98, 148, 0.664);
 }
-
+.button {
+  background-color: #4A90E2;
+  padding: 15px 30px;
+  border-radius: 8px;
+  font-weight: 500;
+}
 .button {
     display: inline-block;
     padding: 12px 25px;
@@ -149,14 +154,17 @@ nav a:hover {
     border-radius: 10px;
     box-shadow: 0 5px 10px rgba(0, 0, 0, 0.2);
     transition: transform 0.3s ease;
-    width: 80%; /* Установите ширину по вашему усмотрению */
+    width: 60%; /* Установите ширину по вашему усмотрению */
+		max-width: 600px;
     margin: 0 auto; /* Центрирование слайда */
 }
 
 .project img {
     width: 100%;
     height: auto;
+		max-height: 300px;
     display: block;
+		object-fit: cover;
 }
 
 .overlay {
@@ -309,7 +317,12 @@ footer {
         margin: 5px;
     }
 
+    @media (max-width: 768px) {
     .project {
-        width: 90%; /* Установите ширину по вашему усмотрению для мобильных устройств */
+        width: 85%; /* Было 90% */
     }
+    .project img {
+        max-height: 250px;
+    }
+}
 }
